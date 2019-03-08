@@ -52,6 +52,8 @@ const smurfyReducer = (state = initialState, action) => {
         error: action.payload,
         fetchingSmurfs: false
       };
+    default:
+      return state;
   }
 };
 
