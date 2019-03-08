@@ -7,6 +7,15 @@ class Smurf extends React.Component {
     height: this.props.smurf.height
   };
 
+  //handleChange = e => {
+  //this.setState({ [e.target.name]: e.target.value });
+  //};
+
+  //updateSmurf = e => {
+  //e.preventDefault();
+  //this.props.handleAddSmurfy({ name, age, height });
+  //};
+
   render() {
     return (
       <React.Fragment>
