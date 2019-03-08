@@ -8,12 +8,14 @@ class Smurf extends React.Component {
   };
 
   render() {
-    return <React.Fragment />;
+    return (
+      <React.Fragment>
+        <h2>{this.state.name}</h2>
+        <p>{this.state.age}</p>
+        <p>{this.state.height}</p>
+      </React.Fragment>
+    );
   }
 }
 
 export default Smurf;
-
-//<h2>{name}</h2>
-//<p>{age}</p>
-//<p>{height}</p>
