@@ -22,14 +22,12 @@ class SmurfForm extends React.Component {
       age: this.state.age,
       height: this.state.height
     });
+    this.setState({ name: "", age: "", height: "" });
   };
 
   render() {
     return (
-      <form
-        handleAddSmurfy={this.props.handleAddSmurfy}
-        onSubmit={this.handleSubmit}
-      >
+      <form onSubmit={this.handleSubmit}>
         <input
           type="text"
           placeholder="Smurf Name..."
