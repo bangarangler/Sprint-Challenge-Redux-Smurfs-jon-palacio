@@ -4,8 +4,8 @@
 import {
   GET_SMURFS_START,
   GET_SMURFS_SUCCESS,
-  GET_SMURFS_FAIL,
-} from '../actions/'
+  GET_SMURFS_FAIL
+} from "../actions/";
 
 /*
  Your initial/default state for this project could *Although does not have to* look a lot like this
@@ -23,7 +23,7 @@ const initialState = {
   fetchingSmurfs: false,
   addingSmurf: false,
   error: null
-}
+};
 
 /*
   You'll only need one smurf reducer for this project.
@@ -34,25 +34,25 @@ const initialState = {
 */
 
 const smurfyReducer = (state = initialState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case GET_SMURFS_START:
-    return {
-      ...state,
-      fetchingSmurfs: true
-    }
+      return {
+        ...state,
+        fetchingSmurfs: true
+      };
     case GET_SMURFS_SUCCESS:
-    return {
-      ...state,
-      smurfs: [...action.payload],
-      fetchingSmurfs: false
-    }
+      return {
+        ...state,
+        smurfs: [...action.payload],
+        fetchingSmurfs: false
+      };
     case GET_SMURFS_FAIL:
-    return {
-      ...state,
-      error: action.payload,
-      fetchingSmurfs: false
-    }
+      return {
+        ...state,
+        error: action.payload,
+        fetchingSmurfs: false
+      };
   }
-}
+};
 
 export default smurfyReducer;
